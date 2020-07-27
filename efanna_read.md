@@ -4,9 +4,7 @@
 
 ## 0 Abstract
 
-这篇文章是图方法，传统方法如层级结构（树）随着维度增加性能会下降，hash-based方法在实际中又缺乏效率。所以graph-based方法最近获得很多关注。本文基于的思想是“The main idea is that a neighbor of a neighbor is also likely to be a neighbor, which we refer as NN-expansion. These methods construct a k-nearest neighbor (kNN) graph offline”。在线查找时，这种方法查找到query节点的候选neighbors，比如random selection，然后check这些neighbors的neighbors选出closer
-
- ones。不过这个方法也不是毫无问题，也会有两个问题，一个是会收敛到局部最优值里面，另一个是build knn graph很耗时。所以本文提出了EFANNA based on knn graph，这种方法很好的结合了层级结构的有点和最近邻图的方法。是目前最快的算法在近最近邻图构建和近最近邻搜索。
+这篇文章是图方法，传统方法如层级结构（树）随着维度增加性能会下降，hash-based方法在实际中又缺乏效率。所以graph-based方法最近获得很多关注。本文基于的思想是“The main idea is that a neighbor of a neighbor is also likely to be a neighbor, which we refer as NN-expansion. These methods construct a k-nearest neighbor (kNN) graph offline”。在线查找时，这种方法查找到query节点的候选neighbors，比如random selection，然后check这些neighbors的neighbors选出closer ones。不过这个方法也不是毫无问题，也会有两个问题，一个是会收敛到局部最优值里面，另一个是build knn graph很耗时。所以本文提出了EFANNA based on knn graph，这种方法很好的结合了层级结构的有点和最近邻图的方法。是目前最快的算法在近最近邻图构建和近最近邻搜索。
 
 ## 1 Introduction
 
